@@ -12,7 +12,6 @@
 
 ### Class Loader
 - Load Class in Runtime
----
 - Hierachical
   - Can created Hierachically
   - Top is bootstrap class loader
