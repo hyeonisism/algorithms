@@ -3,7 +3,7 @@ package org.hyeonisism.searching;
 /**
  * @author hyeonisism
  */
-public class BinarySearch implements SearchAlgorithm {
+public class BinarySearch implements SearchAble {
 
     @Override
     public <T extends Comparable<T>> T find(T[] sortedArray, T key) {
@@ -11,7 +11,7 @@ public class BinarySearch implements SearchAlgorithm {
     }
 
     private <T extends Comparable<T>> T search(T[] sortedArray, T key, int left, int right) {
-        if (right < left) throw new NotFoundException(key);
+        if (right < left) return null;
 
         int mediumValue = (left + right) >>> 1;
 
